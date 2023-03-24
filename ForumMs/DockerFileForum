@@ -1,0 +1,5 @@
+FROM openjdk:8-jdk-alpine
+COPY target/*.jar forum.jar
+WORKDIR /forum
+EXPOSE 9001
+CMD ["java","-jar","/forum.jar"]
